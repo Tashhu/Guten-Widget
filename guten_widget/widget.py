@@ -9,15 +9,21 @@ class Window(QWidget):
         self.resize(300, 400)
         self.setWindowTitle("The Guten-widget")
         self.setWindowIcon(QIcon("icon.jpg"))
- 
+        self.uI()
+
+    def uI(self):
         layout = QVBoxLayout()
         self.setLayout(layout)
  
         label = QLabel("Hello World")
-        label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        label.setAlignment(Qt.AlignmentFlag.AlignTop)
         layout.addWidget(label)
  
-app = QApplication(sys.argv)
-window = Window()
-window.show()
-sys.exit(app.exec())
+def main():
+    app = QApplication(sys.argv)
+    window = Window()
+    window.show()
+    sys.exit(app.exec())
+
+if __name__ == "__main__":
+    main()

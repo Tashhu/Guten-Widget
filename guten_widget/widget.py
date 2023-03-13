@@ -30,20 +30,35 @@ class Window(QWidget):
         search_layout = QHBoxLayout()
         self.search_field = QLineEdit()
         self.search_field.setFont(QFont("Calibri", 12))
-        
+        self.search_field.setPlaceholderText("title, author, or subject")
+
         search_button = QPushButton("Search")
         search_button.setFont(QFont("Calibri", 12))
+
 
         search_layout.addWidget(self.search_field)
         search_layout.addWidget(search_button)
 
         results_text = QTextEdit("Results. ")
         results_text.setFont(QFont("Calibri", 12))
+
+        #Add all our widgets
         layout.addWidget(title_label)
         layout.addWidget(description_label)
         layout.addLayout(search_layout)
         layout.addWidget(results_text)
- 
+
+def search(self):
+    """get the search text and use it to make an API call to get
+    the results for a search"""
+
+    # get the user input
+   
+
+
+
+
+
 def main():
     app = QApplication(sys.argv)
     window = Window()
